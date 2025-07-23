@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    gap: 10px;
+}
+
+.card{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f5f5;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 400ms ease;
+}
+
+.card img{
+    width:100%;
+    height: auto;
+}
+
+.botao-compra {
+    margin-top: auto;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.botao-compra:hover {
+    background-color: #218838;
+}
+
+.pdiv{
+    text-align: center;
+}
+
+p{
+    color: #5f5f5f;
+}
+
+.p3{
+    color: #000000;
+}

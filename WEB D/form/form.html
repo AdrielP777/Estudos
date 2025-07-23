@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Melhora o controle de tamanhos */
+        }
+
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 30px;
+            color: #555;
+            width: 500px;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 500px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #444;
+            font-size: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #66a6ff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4d8ee6;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Cadastro para Vaga de Emprego</h1>
+
+    <form action="#">
+        <!-- Dados Pessoais -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" id="idade" min="18" max="100" required>
+
+            <label for="data-nasc">Data de Nascimento</label>
+            <input type="date" name="data-nasc" id="data-nasc" required>
+
+            <label>Sexo</label>
+            <input type="radio" name="sexo" value="Masculino" id="masc" required>
+            <label for="masc" style="display:inline;">Masculino</label>
+
+            <input type="radio" name="sexo" value="Feminino" id="fem">
+            <label for="fem" style="display:inline;">Feminino</label>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="escolaridade">Escolaridade</label>
+            <select name="escolaridade" id="escolaridade" required>
+                <option value="">Selecione</option>
+                <option value="2grau">Ensino Médio Completo</option>
+                <option value="grad-incomp">Graduação Incompleta</option>
+                <option value="grad-comp">Graduação Completa</option>
+                <option value="pos-incomp">Pós-Graduação Incompleta</option>
+                <option value="pos-comp">Pós-Graduação Completa</option>
+            </select>
+        </fieldset>
+
+        <!-- Experiência -->
+        <fieldset>
+            <legend>Experiência</legend>
+
+            <label>Quais linguagens você domina?</label>
+            <input type="checkbox" name="linguagem" value="Java" id="java">
+            <label for="java" style="display:inline;">Java</label><br>
+
+            <input type="checkbox" name="linguagem" value="Python" id="python">
+            <label for="python" style="display:inline;">Python</label><br>
+
+            <input type="checkbox" name="linguagem" value="C++" id="cpp">
+            <label for="cpp" style="display:inline;">C++</label><br>
+
+            <input type="checkbox" name="linguagem" value="Cobol" id="cobol">
+            <label for="cobol" style="display:inline;">Cobol</label><br>
+
+            <input type="checkbox" name="linguagem" value="Outras" id="outras">
+            <label for="outras" style="display:inline;">Outras</label><br>
+
+            <label for="outras-linguagens">Se respondeu "Outras", informe:</label>
+            <input type="text" name="outras-linguagens" id="outras-linguagens">
+
+            <label for="experiencia">Conte sobre sua experiência profissional</label>
+            <textarea name="experiencia" id="experiencia" placeholder="Descreva aqui suas experiências..."></textarea>
+        </fieldset>
+
+        <!-- Envio -->
+        <fieldset>
+            <legend>Envio</legend>
+
+            <input type="checkbox" name="banco" id="banco">
+            <label for="banco" style="display:inline;">Quero fazer parte do banco de talentos</label>
+
+            <button type="submit">Cadastrar</button>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
